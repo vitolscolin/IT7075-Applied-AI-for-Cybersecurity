@@ -11,3 +11,4 @@ chroma/
 .chroma/
 *.sqlite3
 .cache/
+.venv/
