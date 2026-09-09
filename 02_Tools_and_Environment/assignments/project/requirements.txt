@@ -1,0 +1,9 @@
+# Local / Jetstream2 requirements; install from the repository root.
+# Hosted Colab uses section 5's self-contained dependency cell instead.
+# google.colab comes with Colab; python-dotenv loads the local .env.
+ipykernel
+jupyter
+openai
+python-dotenv
+psutil
+torch
