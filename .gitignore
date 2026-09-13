@@ -13,3 +13,8 @@ chroma/
 .cache/
 .venv/
 .venv-mp1/
+
+.env
+.venv/
+__pycache__/
+.ipynb_checkpoints/
