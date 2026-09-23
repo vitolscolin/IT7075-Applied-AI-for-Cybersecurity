@@ -1,0 +1,11 @@
+# Install into a dedicated environment. On GPU hosts keep the CUDA-enabled Torch build.
+requests>=2.32,<3
+psutil>=6,<8
+pandas>=2.2,<4
+matplotlib>=3.9,<4
+transformers>=4.46,<5
+gradio>=5,<6
+torch>=2.5,<3
+ipykernel>=6,<8
+nbformat>=5,<6
+nbclient>=0.10,<1

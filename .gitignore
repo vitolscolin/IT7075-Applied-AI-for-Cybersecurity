@@ -18,3 +18,8 @@ chroma/
 .venv/
 __pycache__/
 .ipynb_checkpoints/
+
+# LLM hosting walkthrough local environment and generated evidence
+.venv-llmhosting/
+03_LLMs_Local_and_Cloud/assignments/project/llmhosting_results/
+03_LLMs_Local_and_Cloud/assignments/project/llmhosting-*.zip
