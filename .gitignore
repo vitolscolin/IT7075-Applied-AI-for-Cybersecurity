@@ -23,3 +23,11 @@ __pycache__/
 .venv-llmhosting/
 03_LLMs_Local_and_Cloud/assignments/project/llmhosting_results/
 03_LLMs_Local_and_Cloud/assignments/project/llmhosting-*.zip
+
+# Private connection material (real SSH configuration belongs in ~/.ssh)
+.ssh/
+.env.*
+*.pem
+*.key
+id_ed25519*
+id_rsa*
