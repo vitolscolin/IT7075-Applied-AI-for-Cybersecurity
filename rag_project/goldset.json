@@ -1,0 +1,68 @@
+{
+  "about": "Eight-question gold set for the original incident-triage knowledge base: six answerable and two unanswerable.",
+  "kb_files": [
+    "account_triage.md",
+    "endpoint_triage.md",
+    "email_triage.md",
+    "network_triage.md",
+    "evidence_and_escalation.md"
+  ],
+  "questions": [
+    {
+      "qid": "Q1",
+      "question": "How should failed sign-ins followed by a successful sign-in be preserved?",
+      "source": "account_triage.md",
+      "evidence": ["preserve the failed and successful sign-in events as one timeline"],
+      "answerable": true
+    },
+    {
+      "qid": "Q2",
+      "question": "When a workstation downloads and launches an executable, what process evidence should be recorded before host isolation?",
+      "source": "endpoint_triage.md",
+      "evidence": ["record the parent-child process chain before isolating the host"],
+      "answerable": true
+    },
+    {
+      "qid": "Q3",
+      "question": "What should an analyst preserve from a suspected phishing email?",
+      "source": "email_triage.md",
+      "evidence": ["preserve the original message with full headers and attachment hashes"],
+      "answerable": true
+    },
+    {
+      "qid": "Q4",
+      "question": "Which data sources and time standard should be correlated for command-and-control traffic?",
+      "source": "network_triage.md",
+      "evidence": ["correlate DNS, proxy, firewall, and endpoint timestamps in UTC"],
+      "answerable": true
+    },
+    {
+      "qid": "Q5",
+      "question": "How can an analyst verify that an exported artifact did not change?",
+      "source": "evidence_and_escalation.md",
+      "evidence": ["Use SHA-256 to verify that an exported artifact has not changed"],
+      "answerable": true
+    },
+    {
+      "qid": "Q6",
+      "question": "What must remain labeled unresolved in the incident case record?",
+      "source": "evidence_and_escalation.md",
+      "evidence": ["An unresolved cause must remain labeled unresolved in the case record"],
+      "answerable": true
+    },
+    {
+      "qid": "Q7",
+      "question": "What is the recommended watering schedule for tomato seedlings?",
+      "source": null,
+      "evidence": [],
+      "answerable": false
+    },
+    {
+      "qid": "Q8",
+      "question": "What exact SIEM retention period does this incident-triage program require?",
+      "source": null,
+      "evidence": [],
+      "answerable": false
+    }
+  ]
+}
