@@ -1,0 +1,23 @@
+[
+  {
+    "rank": 1,
+    "relevance": 0.596348762512207,
+    "source": "email_triage.md",
+    "evidence_found": false,
+    "text": "# Suspicious Email Triage\n\n## Preserve the message\n\nA screenshot is useful for communication but does not contain all evidence. Preserve the original message or an approved export so headers, attachment hashes, URLs, and routing details remain available. Handle potentially malicious attachments in an authorized analysis environment and never open them on a normal workstation.\n\n## Header and sender review\n\nCompare the visible From address with the envelope sender and Return-Path. Review Authentic"
+  },
+  {
+    "rank": 2,
+    "relevance": 0.5925729870796204,
+    "source": "email_triage.md",
+    "evidence_found": true,
+    "text": "visible From address with the envelope sender and Return-Path. Review Authentication-Results for SPF, DKIM, and DMARC, while remembering that an authenticated compromised account can still send harmful mail. Inspect Received headers from the bottom upward to understand the route. Similar-looking domains, reply-to changes, urgency, and an unusual request can support a phishing assessment.\n\nFor a suspected phishing message, **preserve the original message with full headers and attachment hashes**"
+  },
+  {
+    "rank": 3,
+    "relevance": 0.4341612458229065,
+    "source": "account_triage.md",
+    "evidence_found": false,
+    "text": "hould be revoked, the password reset through the approved identity process, and risky tokens invalidated. If compromise is uncertain, a step-up authentication challenge may preserve access while the analyst gathers evidence. Avoid asking a user to send a password or one-time code. Help-desk verification must use the organization's approved identity check.\n\n## Documentation\n\nRecord facts separately from interpretations. \"Twenty failures and one success from 203.0.113.25\" is a fact. \"Password spra"
+  }
+]

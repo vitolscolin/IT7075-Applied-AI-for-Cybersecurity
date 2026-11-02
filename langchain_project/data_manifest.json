@@ -1,0 +1,30 @@
+[
+  {
+    "path": "goldset.json",
+    "sha256": "dceddb3e29759e871a266732c0cfffb28913448ce5ee5b109eee486aae103a24"
+  },
+  {
+    "path": "my_kb/SOURCES.md",
+    "sha256": "eb1169f87b99de6a261ee35af1ddcbc75f977943925beaaafe0f3352e71da7be"
+  },
+  {
+    "path": "my_kb/account_triage.md",
+    "sha256": "96008a6fd9d4da06f870ee552dcfe829ed99f507c1606c0fb401380bfba97ae3"
+  },
+  {
+    "path": "my_kb/email_triage.md",
+    "sha256": "b5d5536be91c7896c19fd8bf2752d90a3160ba909be8a28bf91f1be880115adb"
+  },
+  {
+    "path": "my_kb/endpoint_triage.md",
+    "sha256": "7f283e23d7ff1232a7463a258c49a9121223dcfb5426b35d1f8220270ac2339f"
+  },
+  {
+    "path": "my_kb/evidence_and_escalation.md",
+    "sha256": "de8ea1f92341a387f0aa3a3a16e3941b723b2a05a15b8abbb6dde58f0ed55b2a"
+  },
+  {
+    "path": "my_kb/network_triage.md",
+    "sha256": "f1370e1bcba897c8a419fe3b303bfb5c30adf1d10564bcc4a70ab927c537be69"
+  }
+]

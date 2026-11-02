@@ -1,0 +1,529 @@
+{
+  "default": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "endpoint_triage.md",
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "chunk_350": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "endpoint_triage.md",
+        "endpoint_triage.md",
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": false,
+      "chunks": 3,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "chunk_700": [
+    {
+      "qid": "Q1",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "k_1": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": false,
+      "chunks": 1,
+      "sources": [
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "k_5": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "endpoint_triage.md",
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 2,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "threshold_0.35": [
+    {
+      "qid": "Q1",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "endpoint_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q4",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": false,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    }
+  ],
+  "threshold_0.65": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "account_triage.md",
+        "account_triage.md",
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "endpoint_triage.md",
+        "endpoint_triage.md",
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md",
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 1,
+      "sources": [
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": false,
+      "chunks": 1,
+      "sources": [
+        "account_triage.md"
+      ]
+    }
+  ],
+  "threshold_0.80": [
+    {
+      "qid": "Q1",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "account_triage.md",
+        "account_triage.md",
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q2",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "endpoint_triage.md",
+        "endpoint_triage.md",
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q3",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "email_triage.md",
+        "email_triage.md",
+        "account_triage.md"
+      ]
+    },
+    {
+      "qid": "Q4",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "network_triage.md",
+        "endpoint_triage.md",
+        "network_triage.md"
+      ]
+    },
+    {
+      "qid": "Q5",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md",
+        "email_triage.md"
+      ]
+    },
+    {
+      "qid": "Q6",
+      "correct": true,
+      "chunks": 3,
+      "sources": [
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md",
+        "evidence_and_escalation.md"
+      ]
+    },
+    {
+      "qid": "Q7",
+      "correct": true,
+      "chunks": 0,
+      "sources": []
+    },
+    {
+      "qid": "Q8",
+      "correct": false,
+      "chunks": 3,
+      "sources": [
+        "account_triage.md",
+        "account_triage.md",
+        "evidence_and_escalation.md"
+      ]
+    }
+  ]
+}

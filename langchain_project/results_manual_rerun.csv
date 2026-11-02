@@ -1,0 +1,9 @@
+label,chunks,found,refused
+default,26,6,2
+chunk_350,41,5,2
+chunk_700,20,4,2
+k_1,26,5,2
+k_5,26,6,2
+threshold_0.35,26,2,2
+threshold_0.65,26,6,1
+threshold_0.80,26,6,1

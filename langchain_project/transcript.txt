@@ -1,0 +1,57 @@
+Q1: How should failed sign-ins followed by a successful sign-in be preserved?
+[RAG] (offline excerpt; not generated reasoning) [account_triage.md]
+by success, **preserve the failed and successful sign-in events as one timeline**. Review multifactor authentication events, password-reset activity, mailbox rules, OAuth grants, and changes to recovery information. A success with a previously registered device is different from a success that also creates a new device registration.
+
+## Containment
+
+Containment should match the evidence. A confirmed hostile session should be revoked, the password reset through the approved id
+
+Q2: When a workstation downloads and launches an executable, what process evidence should be recorded before host isolation?
+[RAG] (offline excerpt; not generated reasoning) [endpoint_triage.md]
+sses, file hash, signer, and alert time. A suspicious child of an Office application deserves attention because documents can launch scripts or installers. Compare the binary path and signer with known software inventory. Search the same hash and command line across other managed endpoints.
+
+When a workstation downloads an executable and launches it, **record the parent-child process chain before isolating the host**. Also preserve the download URL, browser history if author
+
+Q3: What should an analyst preserve from a suspected phishing email?
+[RAG] (offline excerpt; not generated reasoning) [email_triage.md]
+# Suspicious Email Triage
+
+## Preserve the message
+
+A screenshot is useful for communication but does not contain all evidence. Preserve the original message or an approved export so headers, attachment hashes, URLs, and routing details remain available. Handle potentially malicious attachments in an authorized analysis environment and never open them on a normal workstation.
+
+## Header and sender review
+
+Compare the visible From address with the envelope sender and Return-Path
+
+Q4: Which data sources and time standard should be correlated for command-and-control traffic?
+[RAG] (offline excerpt; not generated reasoning) [network_triage.md]
+command-and-control traffic, **correlate DNS, proxy, firewall, and endpoint timestamps in UTC**. Repeated low-volume connections at regular intervals may indicate beaconing, but monitoring agents and update tools can behave similarly. Examine interval consistency, destination reputation, TLS metadata, transferred bytes, and the responsible process before reaching a conclusion.
+
+## Scanning and lateral movement
+
+Many connection attempts across ports or hosts may be scanning. D
+
+Q5: How can an analyst verify that an exported artifact did not change?
+[RAG] (offline excerpt; not generated reasoning) [evidence_and_escalation.md]
+# Evidence Handling and Escalation
+
+## Evidence quality
+
+Incident notes must let another analyst reconstruct what happened. Record timestamps in UTC, the system that produced each event, the query or filter used, and the collection time. Keep original exports when possible and work from copies. A copied text fragment should retain enough context to show what the fields mean.
+
+Hash exported files when integrity matters. **Use SHA-256 to verify that an exported artifac
+
+Q6: What must remain labeled unresolved in the incident case record?
+[RAG] (offline excerpt; not generated reasoning) [evidence_and_escalation.md]
+n is plausible but weakly supported. **An unresolved cause must remain labeled unresolved in the case record**. Do not convert missing evidence into a statement that nothing happened.
+
+## Escalation
+
+Escalate when there is confirmed or likely unauthorized access, malware execution, sensitive-data exposure, material service impact, or scope beyond the analyst's authority. Include a short summary, affected assets and users, known timeline, actions already taken, eviden
+
+Q7: What is the recommended watering schedule for tomato seedlings?
+[LLM] I don't know -- no retrieved evidence. (offline mode)
+
+Q8: What exact SIEM retention period does this incident-triage program require?
+[LLM] I don't know -- no retrieved evidence. (offline mode)
