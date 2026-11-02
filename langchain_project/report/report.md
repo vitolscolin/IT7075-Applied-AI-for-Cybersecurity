@@ -16,23 +16,23 @@ Concept check
 
 What problem does LangChain solve
 
-Calling a model API only handles the model request. LangChain supplies common interfaces for documents, retrieval, prompts, models, and output parsing, so I can connect those stages without maintaining all of their calling code myself.
+With a direct API call, I still have to write the code that gets the documents, finds relevant text, and puts the prompt together. LangChain gives me reusable pieces for those steps, so I can spend more time on how the system works and less time connecting everything myself.
 
 Why use a prompt template
 
-A prompt template is reusable text with named input fields. The context and question placeholders let me keep the instructions consistent while changing the evidence and question for each request, rather than rebuilding a hard-coded prompt every time.
+A prompt template lets me write the instructions once and leave placeholders for things that change, like the question and retrieved context. That keeps the prompt consistent across questions and makes it easier to update without changing the rest of the pipeline.
 
 What the prompt model parser chain does
 
-The prompt fills its placeholders and creates the messages; the model consumes those messages and returns a response. The output parser turns that response into the expected type, which is a string here. My offline model stage quotes context instead of generating new reasoning.
+The prompt fills in the question and context, the model processes those messages, and the parser turns the response into a string I can use. In this project, the offline model step quotes the retrieved text instead of generating a new answer.
 
 How a retriever fits into a chain
 
-A retriever takes a question and returns relevant Documents, including their metadata. In this chain, its output becomes the context while a passthrough sends the original question to the other prompt placeholder.
+A retriever takes the question and returns the document chunks that match it, along with information about where they came from. My chain uses those chunks as context and passes the original question into the prompt alongside them.
 
 When to branch and when to run in parallel
 
-A branch selects a path based on a condition, such as routing a critical incident to an urgent review workflow and other incidents to routine triage. Parallel steps both run on the same input, such as independently summarizing endpoint and network evidence before combining the findings.
+I would use a branch when only one path should run, such as sending a critical security incident to urgent review and a routine issue to normal triage. I would use parallel steps when I need both results, such as reviewing endpoint evidence and network evidence separately before combining the findings.
 
 
 ---
@@ -40,9 +40,9 @@ A branch selects a path based on a condition, such as routing a critical inciden
 
 The rebuild and what it replaced
 
-I rebuilt the incident-triage RAG using the same five Markdown documents and the same eight questions from the earlier project: six answerable and two unanswerable. All copied files, including the source notes and goldset.json, are checked byte-for-byte against rag_project; data_manifest.json records their SHA-256 hashes. The five indexed documents contain 10,204 characters, and SOURCES.md is excluded from retrieval just as before.
+For this project, I rebuilt my earlier incident-triage RAG with LangChain. I kept the same five Markdown documents and eight questions: six the documents can answer and two they cannot. The notebook checks that the copied files match the originals exactly and saves their SHA-256 hashes in data_manifest.json. As before, SOURCES.md stays out of the retrieval index.
 
-The notebook first completes all five practice stages on the course knowledge base, then builds the custom bot. The custom pipeline uses TextLoader, CharacterTextSplitter, normalized all-MiniLM-L6-v2 embeddings on CPU, cosine Chroma retrieval, ChatPromptTemplate, and LCEL pipes. A deterministic offline model returns a labeled excerpt or an empty-context refusal, which is the permitted no-key path.
+The first part of the notebook works through the five practice stages using the course knowledge base. Then I apply those stages to my own documents using TextLoader, CharacterTextSplitter, local MiniLM embeddings, Chroma, and an LCEL chain. It runs on CPU without an API key. The answer step returns a labeled excerpt when it finds context and a refusal when it does not.
 
 LangChain stage | Earlier code replaced
 TextLoader and CharacterTextSplitter | load_and_chunk() and split_into_chunks()
@@ -51,13 +51,13 @@ as_retriever() with score threshold | retrieve() and its distance-filtering loop
 ChatPromptTemplate | SYSTEM.format(...) inside ask()
 LCEL dictionary and pipe sequence | The orchestration inside ask()
 
-Not every helper disappears. format_sources() still controls how citations enter the prompt, and the offline RunnableLambda replaces grounded_answer() without turning it into a real language model. The value of LCEL is that the assembled flow has one invoke interface and clearly named inputs.
+I still need a small helper, format_sources(), to put source names into the context. The offline RunnableLambda also takes the place of grounded_answer(). The main change is that the sequence inside ask() is now written as a chain that I can run with invoke().
 
 Where the framework helped and hid details
 
-Document objects preserve source metadata through splitting and retrieval, and the standard retriever fits directly into the chain. That reduces repetitive embedding, storage, and dispatch code. However, a one-line store constructor hides index configuration and score conversion; the splitter also chooses exact boundaries and when to stop emitting overlapping tails.
+The most useful part is that LangChain carries the source information along with the text and lets the retriever plug directly into the chain. I no longer have to handle each embedding and database call myself. The tradeoff is that a short constructor call can hide details like the distance metric, score conversion, and exact chunk boundaries.
 
-Those hidden choices matter when comparing experiments or investigating a missed security instruction. I made the distance metric explicit, inspected raw distances against relevance scores, and compared both retrievers on identical chunks. Collection names are unique on every build, so rerunning cells cannot silently accumulate old chunks.
+Those details matter when a question misses the evidence I expected it to find. I checked the raw distances against the relevance scores and compared the two retrievers on identical chunks. Each build also gets a unique collection name so running a cell again does not mix old chunks with new ones.
 
 
 ---
@@ -65,9 +65,9 @@ Those hidden choices matter when comparing experiments or investigating a missed
 
 Measured comparison
 
-Both implementations used the same normalized MiniLM model, cosine distance, and evidence-matching rule: a gold phrase must occur within one retrieved chunk. Found counts the six answerable questions that satisfy that rule; refused counts the two unanswerable questions that return no chunks. These measure retrieval behavior, not generated-answer accuracy.
+To keep the comparison fair, I used the same normalized MiniLM embeddings, cosine distance, and scoring rule in both versions. A question counts as found when one retrieved chunk contains its expected evidence phrase. An unsupported question counts as refused when nothing is retrieved. These counts tell me how retrieval performed; they do not measure the quality of a generated answer.
 
-The default has 500-character chunks, 80-character overlap, and k=3. The manual rule keeps distance at or below 0.50. The LangChain rule keeps relevance at or above 0.50, using relevance = max(0, min(1, 1 - cosine distance)). For every positive cutoff tested, the rules are equivalent. A stricter distance of 0.35 therefore becomes a higher relevance cutoff of 0.65, not 0.35.
+The default uses 500-character chunks, an 80-character overlap, and k=3. The manual version keeps distances at or below 0.50, while LangChain keeps relevance scores at or above 0.50. Here, relevance = max(0, min(1, 1 - cosine distance)). The direction matters: tightening the old distance cutoff to 0.35 means raising the relevance cutoff to 0.65.
 
 Change from default | Distance / score | Chunks M / L | Found M / L | Refused M / L
 Default | 0.50 / 0.50 | 26 / 26 | 6/6 | 6/6 | 2/2 | 2/2
@@ -81,11 +81,11 @@ Loosest threshold | 0.80 / 0.20 | 26 / 26 | 6/6 | 6/6 | 1/2 | 1/2
 
 M = manual implementation; L = LangChain. Every row changes at most one setting from the default; overlap stays at 80 characters. The labels in results_langchain.csv preserve the earlier distance labels, while the explicit score_threshold column gives the LangChain value.
 
-The default achieves 6/6 found and 2/2 refused in both versions. All eight manual configurations were rerun from the earlier notebook functions and reproduce the committed results. With identical default chunks, both retrieval interfaces return the same accepted text for all eight questions; this is stronger evidence than comparing totals alone.
+Both versions found all six answerable questions and refused both unsupported questions at the default settings. The notebook also reran all eight manual configurations and matched the earlier results. On the same default chunks, both retrievers returned the same text for every question, so the matching totals were not just a coincidence.
 
-At chunk size 350, the manual splitter emits 41 chunks while LangChain emits 39. The two omitted manual chunks are redundant final tails already contained in retained chunks; the notebook checks this directly. Their omission does not change the measured outcomes. At the default, both versions have 26 chunks.
+One difference showed up with 350-character chunks: my manual splitter produced 41 chunks, while LangChain produced 39. The two extra manual chunks were short pieces at the ends of documents that were already covered by other chunks. Leaving them out did not change the results. At the default size, both versions produced 26 chunks.
 
-A stricter cutoff reduces found to 2/6. Looser cutoffs keep 6/6 found but allow unsupported Q8 through, reducing refusals to 1/2. Because the representations and thresholds are controlled, the framework itself does not improve the measured retrieval quality.
+Making the cutoff stricter dropped the found count to 2/6. Looser cutoffs still found all six answers, but they also let Q8 through, leaving only one correct refusal. LangChain made the pipeline easier to connect, but it did not improve these retrieval results on its own.
 
 
 ---
@@ -97,21 +97,21 @@ Q3 at k equals one
 
 The question asks: “What should an analyst preserve from a suspected phishing email?” At k=1, the first email_triage.md chunk scores 0.5963 and does not contain the exact gold phrase. The second chunk scores 0.5926 and contains “preserve the original message with full headers and attachment hashes,” but k=1 excludes it.
 
-The retrieved first passage says to preserve the original message or an approved export so headers, attachment hashes, URLs, and routing details remain available. It is relevant and overlaps semantically with the expected action. Therefore, this is specifically an exact-evidence metric miss: it would be misleading to describe it as retrieving an unrelated document or proving a wholly wrong natural-language answer.
+The first passage is still useful: it says to preserve the original message or an approved export so the headers, attachment hashes, URLs, and routing details are available. It misses the exact phrase the scoring function looks for, even though it covers much of the same action. I would count this as a miss under the lab metric, but I would not call the retrieved passage unrelated.
 
-The small score gap explains the ranking problem. Raising k to the default of three retains the second passage and restores Q3 evidence. In a larger system I would examine chunk boundaries and a semantic answer-quality check, rather than concluding from one missing phrase that the response is unusable. I would keep the fixed lab metric for this comparison and evaluate any new metric separately.
+The two scores are close, and allowing three chunks instead of one brings the expected phrase back into the results. This showed me why it is worth reading what was retrieved instead of only looking at the total score. For a larger project, I would also check whether the response communicates the right action, while keeping the original phrase-based metric for this comparison.
 
 The unsupported policy question
 
-Q8 asks for the exact SIEM retention period required by the program, which the documents do not specify. At looser thresholds, related incident-policy text is retrieved anyway. The offline model quotes whatever context it receives, so a nonempty retrieval can produce a [RAG] response even though the answer is absent. This is why semantic similarity alone is not an answerability guarantee.
+Q8 asks for an exact SIEM retention period that the documents never give. With a loose cutoff, the retriever still finds related incident-policy text, and the offline answer step quotes it. That is a more concerning failure: the text sounds relevant, but it does not answer the question.
 
 Which version I would build next time
 
-For a small maintained application, I would use LangChain because the common interfaces and metadata handling make the pipeline easier to extend. I would still retain tests and diagnostics for chunk boundaries, metric selection, and refusal behavior. For teaching the retrieval mechanics or investigating a scoring discrepancy, the manual version is easier to trace because each embedding, query, and filtering step is visible.
+I would use LangChain again for an application I planned to keep building because the pieces are easier to connect and extend. I would still keep checks for chunk boundaries, scores, and refusals. The manual version is useful when I need to understand why something happened, since I can follow each embedding, query, and filtering step directly.
 
 Limits of the evidence
 
-This run uses a cached local embedding model on CPU and an offline excerpt renderer, with no live generative model, API key, or GPU. Evidence found across the retrieved set does not guarantee the displayed excerpt includes the full answer. The eight authored questions are a small smoke test, not a held-out benchmark, and no latency or developer-effort benchmark was performed.
+This project ran locally on CPU with an offline answer step, so I did not test a live generative model. Finding the expected phrase somewhere in the retrieved chunks also does not mean the displayed excerpt includes the whole answer. The eight questions are useful for checking this small project, but I would need a larger, separate test set before making broader accuracy claims.
 
 Sources and reproducibility
 

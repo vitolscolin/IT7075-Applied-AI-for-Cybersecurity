@@ -53,7 +53,6 @@ Custom retrieval uses normalized embeddings and cosine distance. For positive th
 The report is in `report/LangChain_RAG_Report.pdf`; its first-page **Video URL** field is editable in a PDF form reader. Paste your uploaded recording link there and save a copy. `report/report.md` is editable source text as well.
 
 1. Record and upload your own 5–10 minute narrated live run, then complete the report's video field.
-2. The repository was public when checked on 2026-11-02; the rubric requires a private repository with the instructor and TA added. Resolve visibility/access before submitting. Collaborator access has not been verified.
-3. Submit the completed PDF and confirm the instructor can open both links.
+2. Submit the completed PDF and confirm the instructor can open both links.
 
 The original assignment starters are unchanged. All implementation lives in this student project folder; the previous RAG project is preserved.
