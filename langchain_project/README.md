@@ -48,11 +48,12 @@ Custom retrieval uses normalized embeddings and cosine distance. For positive th
 
 “Found” means a gold evidence phrase appeared within a retrieved chunk. “Refused” means zero chunks for an unanswerable question. Neither is a generative-answer quality metric, and eight authored questions do not establish production accuracy.
 
-## Report and remaining submission steps
+## Report and video
 
-The report is in `report/LangChain_RAG_Report.pdf`; its first-page **Video URL** field is editable in a PDF form reader. Paste your uploaded recording link there and save a copy. `report/report.md` is editable source text as well.
+The completed report is in `report/LangChain_RAG_Report.pdf`, with the project and video links on the first page. The video URL field remains editable. `report/report.md` is editable source text as well.
 
-1. Record and upload your own 5–10 minute narrated live run, then complete the report's video field.
-2. Submit the completed PDF and confirm the instructor can open both links.
+[Watch the recorded notebook walkthrough](https://youtu.be/9g1AVmf34Fk?si=CsolxvOJrHykhCkH).
+
+Submit the completed PDF and confirm the instructor can open both links.
 
 The original assignment starters are unchanged. All implementation lives in this student project folder; the previous RAG project is preserved.

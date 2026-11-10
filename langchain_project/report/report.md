@@ -8,9 +8,9 @@ Colin Vitols | IT7075 Applied AI for Cybersecurity | November 2, 2026
 
 Project folder: <link href="https://github.com/vitolscolin/IT7075-Applied-AI-for-Cybersecurity/tree/langchain-rag-project/langchain_project" color="#174EA6">GitHub - langchain-rag-project / langchain_project</link>
 
-Video URL - paste the shared recording link into the field below before submission.
+Video: <link href="https://youtu.be/9g1AVmf34Fk?si=CsolxvOJrHykhCkH" color="#174EA6">Watch the recorded notebook walkthrough</link>
 
-Video URL: [Add your recording link here]
+Video URL: https://youtu.be/9g1AVmf34Fk?si=CsolxvOJrHykhCkH
 
 Concept check
 
