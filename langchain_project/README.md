@@ -50,7 +50,7 @@ Custom retrieval uses normalized embeddings and cosine distance. For positive th
 
 ## Report and video
 
-The completed report is in `report/LangChain_RAG_Report.pdf`, with the project and video links on the first page. The video URL field remains editable. `report/report.md` is editable source text as well.
+The completed report is in `report/LangChain_RAG_Report.pdf`, with the project and video links on the first page. `report/report.md` is editable source text as well.
 
 [Watch the recorded notebook walkthrough](https://youtu.be/9g1AVmf34Fk?si=CsolxvOJrHykhCkH).
 
