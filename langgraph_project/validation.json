@@ -1,0 +1,28 @@
+{
+  "passed": 23,
+  "checks": [
+    "expected confusion counts",
+    "baseline miss takes close branch",
+    "context catch takes investigate branch",
+    "approved maintenance takes close branch",
+    "approval mismatch: actor=impostor",
+    "approval mismatch: asset=OTHER",
+    "approval mismatch: action=mass_encryption",
+    "approval mismatch: occurred_at=2026-11-09T04:00:00+00:00",
+    "approval mismatch: occurred_at=not-a-date",
+    "approval mismatch: occurred_at=2026-11-09T02:15:00",
+    "approval mismatch: change_id=unknown",
+    "aware approval time: 2026-11-09T02:00:00+00:00",
+    "aware approval time: 2026-11-09T03:00:00+00:00",
+    "aware approval time: 2026-11-08T21:15:00-05:00",
+    "prose cannot grant approval",
+    "unrelated ticket cannot approve logging shutdown",
+    "labels excluded from input",
+    "repeat evaluation is identical",
+    "input alerts remain unchanged",
+    "no previous decision leaks into next alert",
+    "missing context preserves keyword escalation",
+    "thread continuation retained event",
+    "thread isolation preserved"
+  ]
+}

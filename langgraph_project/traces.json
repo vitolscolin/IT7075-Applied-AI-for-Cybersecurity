@@ -1,0 +1,131 @@
+{
+  "baseline_A01": [
+    {
+      "classify": {
+        "matched": [
+          "rce"
+        ],
+        "risk": "high",
+        "reason": "Keyword matches: rce",
+        "context": {},
+        "decision": "",
+        "report": ""
+      }
+    },
+    {
+      "investigate": {
+        "decision": "escalate",
+        "report": "ESCALATE. Keyword matches: rce"
+      }
+    }
+  ],
+  "baseline_A06": [
+    {
+      "classify": {
+        "matched": [],
+        "risk": "low",
+        "reason": "No keyword matched.",
+        "context": {},
+        "decision": "",
+        "report": ""
+      }
+    },
+    {
+      "quick_close": {
+        "decision": "close",
+        "report": "CLOSE. No keyword matched."
+      }
+    }
+  ],
+  "G1_A06": [
+    {
+      "classify": {
+        "matched": [],
+        "risk": "low",
+        "reason": "No keyword matched.",
+        "context": {},
+        "decision": "",
+        "report": ""
+      }
+    },
+    {
+      "context_review": {
+        "context": {
+          "environment": "production",
+          "role": "audit_trail",
+          "verified_change": false
+        },
+        "risk": "high",
+        "reason": "Unapproved logging shutdown on a production audit asset."
+      }
+    },
+    {
+      "investigate": {
+        "decision": "escalate",
+        "report": "ESCALATE. Unapproved logging shutdown on a production audit asset."
+      }
+    }
+  ],
+  "G1_A07": [
+    {
+      "classify": {
+        "matched": [
+          "admin"
+        ],
+        "risk": "high",
+        "reason": "Keyword matches: admin",
+        "context": {},
+        "decision": "",
+        "report": ""
+      }
+    },
+    {
+      "context_review": {
+        "context": {
+          "environment": "production",
+          "role": "application",
+          "verified_change": true
+        },
+        "risk": "low",
+        "reason": "Actor, asset, action and time match a simulated approved change."
+      }
+    },
+    {
+      "quick_close": {
+        "decision": "close",
+        "report": "CLOSE. Actor, asset, action and time match a simulated approved change."
+      }
+    }
+  ],
+  "G1_A09": [
+    {
+      "classify": {
+        "matched": [
+          "outbound"
+        ],
+        "risk": "high",
+        "reason": "Keyword matches: outbound",
+        "context": {},
+        "decision": "",
+        "report": ""
+      }
+    },
+    {
+      "context_review": {
+        "context": {
+          "environment": "unknown",
+          "role": "unknown",
+          "verified_change": false
+        },
+        "risk": "high",
+        "reason": "Keyword matches: outbound"
+      }
+    },
+    {
+      "investigate": {
+        "decision": "escalate",
+        "report": "ESCALATE. Keyword matches: outbound"
+      }
+    }
+  ]
+}

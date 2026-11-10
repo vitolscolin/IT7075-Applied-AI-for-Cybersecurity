@@ -1,0 +1,195 @@
+{
+  "about": "Twelve original synthetic, AI-assisted coursework scenarios adapted from the course template. Labels and notes are evaluation-only. No employer logs or real operational identifiers. Review the rationale before presenting.",
+  "alerts": [
+    {
+      "id": "A01",
+      "alert": "IDS flagged an RCE payload against WEB-01 and EDR recorded the web process spawning a shell.",
+      "expected": "escalate",
+      "note": "Correlated network and process evidence indicates execution on a production web server.",
+      "source_refs": [
+        "S1"
+      ],
+      "event": {
+        "asset": "WEB-01",
+        "actor": "external",
+        "action": "exploit_detected",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A02",
+      "alert": "EDR detected ransomware behavior on FILE-02 as hundreds of documents were renamed and became unreadable.",
+      "expected": "escalate",
+      "note": "Active mass file modification threatens availability; this is not a scheduled test.",
+      "source_refs": [
+        "S2"
+      ],
+      "event": {
+        "asset": "FILE-02",
+        "actor": "unknown-process",
+        "action": "mass_encryption",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A03",
+      "alert": "Windows 4728 recorded an unapproved service account addition to Domain Admins on DC-01.",
+      "expected": "escalate",
+      "note": "An unexpected privileged group membership requires investigation; no matching approval exists.",
+      "source_refs": [
+        "S3"
+      ],
+      "event": {
+        "asset": "DC-01",
+        "actor": "svc-unrecognized",
+        "action": "group_add",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A04",
+      "alert": "EDR detected credential dumping through an unsigned process reading LSASS memory on HR-04.",
+      "expected": "escalate",
+      "note": "A suspicious process reading authentication material can enable account compromise.",
+      "source_refs": [
+        "S4"
+      ],
+      "event": {
+        "asset": "HR-04",
+        "actor": "unsigned-process",
+        "action": "credential_access",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A05",
+      "alert": "Proxy logs show an outbound upload of payroll archives to a newly seen destination with no business owner.",
+      "expected": "escalate",
+      "note": "Sensitive data leaving for an unexplained destination warrants analyst review even without a malware signature.",
+      "source_refs": [
+        "S5"
+      ],
+      "event": {
+        "asset": "PAYROLL-01",
+        "actor": "user-session",
+        "action": "data_transfer",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A06",
+      "alert": "CloudTrail recorded StopLogging for the production audit trail, invoked by an unfamiliar role with no change ticket.",
+      "expected": "escalate",
+      "note": "Disabling production audit collection creates an evidence gap; the role and change are unexplained.",
+      "source_refs": [
+        "S6"
+      ],
+      "event": {
+        "asset": "AUDIT-PROD",
+        "actor": "unknown-role",
+        "action": "StopLogging",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A07",
+      "alert": "An administrator temporarily joined the support group on APP-02 during the approved CHG-101 maintenance window.",
+      "expected": "close",
+      "note": "A separate simulated change record matches the actor, asset, action, and time; the membership is expected.",
+      "source_refs": [
+        "S3"
+      ],
+      "event": {
+        "asset": "APP-02",
+        "actor": "ops-maint",
+        "action": "group_add",
+        "change_id": "CHG-101",
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A08",
+      "alert": "The scheduled scanner reported a critical test signature on LAB-01 during the approved CHG-102 detection exercise.",
+      "expected": "close",
+      "note": "The lab asset and synthetic detection exercise match a verified change record; this is not an unremediated production finding.",
+      "source_refs": [
+        "S1"
+      ],
+      "event": {
+        "asset": "LAB-01",
+        "actor": "scanner-lab",
+        "action": "test_signature",
+        "change_id": "CHG-102",
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A09",
+      "alert": "The backup service completed its outbound archive copy to the established recovery vault with matching job checksums.",
+      "expected": "close",
+      "note": "The described job and destination are expected backup activity; an analyst can verify them, but this graph has no backup lookup.",
+      "source_refs": [
+        "S5"
+      ],
+      "event": {
+        "asset": "BACKUP-01",
+        "actor": "backup-service",
+        "action": "data_transfer",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A10",
+      "alert": "The employee completed a password reset through the self-service portal after identity verification.",
+      "expected": "close",
+      "note": "A verified user-requested reset with no anomalous follow-up is routine account support.",
+      "source_refs": [
+        "S7"
+      ],
+      "event": {
+        "asset": "USER-10",
+        "actor": "employee",
+        "action": "password_reset",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A11",
+      "alert": "One failed logon on a managed laptop was followed by a successful retry from the same user and device.",
+      "expected": "close",
+      "note": "One corrected typing error from the known device is not evidence of an attack in this scenario.",
+      "source_refs": [
+        "S7"
+      ],
+      "event": {
+        "asset": "USER-11",
+        "actor": "employee",
+        "action": "login_failure",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    },
+    {
+      "id": "A12",
+      "alert": "The endpoint sensor sent its hourly health heartbeat and reported all collectors online.",
+      "expected": "close",
+      "note": "The event is a normal sensor health status with no detection or unexplained change.",
+      "source_refs": [],
+      "event": {
+        "asset": "USER-12",
+        "actor": "sensor",
+        "action": "health_check",
+        "change_id": null,
+        "occurred_at": "2026-11-09T02:15:00+00:00"
+      }
+    }
+  ]
+}

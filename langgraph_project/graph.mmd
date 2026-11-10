@@ -1,0 +1,22 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	classify(classify)
+	investigate(investigate)
+	quick_close(quick_close)
+	context_review(context_review)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> classify;
+	classify --> context_review;
+	context_review -.-> investigate;
+	context_review -.-> quick_close;
+	investigate --> __end__;
+	quick_close --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+

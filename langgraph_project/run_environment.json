@@ -1,0 +1,16 @@
+{
+  "python": "3.12.3",
+  "packages": {
+    "langgraph": "1.2.20",
+    "langgraph-checkpoint": "4.3.1",
+    "langchain-core": "1.7.7",
+    "nbformat": "5.11.1",
+    "nbclient": "0.11.0",
+    "ipykernel": "7.4.0"
+  },
+  "input_sha256": {
+    "my_alerts.json": "99539d6d3ac0f10c1ecce39e6390f4cf520f024a99a10d8e013db68469e992e5",
+    "context_fixture.json": "f33c8e948213a1cbdad2fbd592ae2a7fa463e5454e34b5cac3cbbff678e9a5ff"
+  },
+  "execution": "local CPU; deterministic Python; no model/API calls"
+}

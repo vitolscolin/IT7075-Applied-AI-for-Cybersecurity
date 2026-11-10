@@ -1,0 +1,682 @@
+{
+  "K0": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Keyword matches: critical"
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ],
+  "K1": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "credential"
+      ],
+      "reason": "Keyword matches: credential"
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Keyword matches: critical"
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ],
+  "K2": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "credential"
+      ],
+      "reason": "Keyword matches: credential"
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Keyword matches: critical"
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ],
+  "K3": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "credential"
+      ],
+      "reason": "Keyword matches: credential"
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Keyword matches: critical"
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "failed"
+      ],
+      "reason": "Keyword matches: failed"
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ],
+  "K4": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "credential"
+      ],
+      "reason": "Keyword matches: credential"
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "close",
+      "outcome": "missed",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Keyword matches: critical"
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "password"
+      ],
+      "reason": "Keyword matches: password"
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "failed"
+      ],
+      "reason": "Keyword matches: failed"
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ],
+  "G1": [
+    {
+      "id": "A01",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "rce"
+      ],
+      "reason": "Keyword matches: rce"
+    },
+    {
+      "id": "A02",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "ransomware"
+      ],
+      "reason": "Keyword matches: ransomware"
+    },
+    {
+      "id": "A03",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Keyword matches: admin"
+    },
+    {
+      "id": "A04",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "credential"
+      ],
+      "reason": "Keyword matches: credential"
+    },
+    {
+      "id": "A05",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A06",
+      "expected": "escalate",
+      "decision": "escalate",
+      "outcome": "caught",
+      "matched": [],
+      "reason": "Unapproved logging shutdown on a production audit asset."
+    },
+    {
+      "id": "A07",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [
+        "admin"
+      ],
+      "reason": "Actor, asset, action and time match a simulated approved change."
+    },
+    {
+      "id": "A08",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [
+        "critical"
+      ],
+      "reason": "Actor, asset, action and time match a simulated approved change."
+    },
+    {
+      "id": "A09",
+      "expected": "close",
+      "decision": "escalate",
+      "outcome": "over_escalated",
+      "matched": [
+        "outbound"
+      ],
+      "reason": "Keyword matches: outbound"
+    },
+    {
+      "id": "A10",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A11",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    },
+    {
+      "id": "A12",
+      "expected": "close",
+      "decision": "close",
+      "outcome": "closed_ok",
+      "matched": [],
+      "reason": "No keyword matched."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "about": "Simulated read-only asset/change systems. Contains context, not answer labels or alert IDs. It is not live validation.",
+  "assets": {
+    "AUDIT-PROD": {
+      "environment": "production",
+      "role": "audit_trail"
+    },
+    "LAB-01": {
+      "environment": "lab",
+      "role": "test_endpoint"
+    },
+    "APP-02": {
+      "environment": "production",
+      "role": "application"
+    }
+  },
+  "changes": {
+    "CHG-101": {
+      "approved": true,
+      "asset": "APP-02",
+      "actor": "ops-maint",
+      "action": "group_add",
+      "start": "2026-11-09T02:00:00+00:00",
+      "end": "2026-11-09T03:00:00+00:00"
+    },
+    "CHG-102": {
+      "approved": true,
+      "asset": "LAB-01",
+      "actor": "scanner-lab",
+      "action": "test_signature",
+      "start": "2026-11-09T02:00:00+00:00",
+      "end": "2026-11-09T03:00:00+00:00"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "incident-A06": {
+    "alert": "Follow-up: the audit stream remains stopped.",
+    "event": {
+      "asset": "AUDIT-PROD",
+      "actor": "unknown-role",
+      "action": "StopLogging",
+      "change_id": null,
+      "occurred_at": "2026-11-09T02:15:00+00:00"
+    },
+    "risk": "high",
+    "matched": [],
+    "context": {
+      "environment": "production",
+      "role": "audit_trail",
+      "verified_change": false
+    },
+    "reason": "Unapproved logging shutdown on a production audit asset.",
+    "decision": "escalate",
+    "report": "ESCALATE. Unapproved logging shutdown on a production audit asset."
+  },
+  "incident-A07": {
+    "alert": "An administrator temporarily joined the support group on APP-02 during the approved CHG-101 maintenance window.",
+    "event": {
+      "asset": "APP-02",
+      "actor": "ops-maint",
+      "action": "group_add",
+      "change_id": "CHG-101",
+      "occurred_at": "2026-11-09T02:15:00+00:00"
+    },
+    "risk": "low",
+    "matched": [
+      "admin"
+    ],
+    "context": {
+      "environment": "production",
+      "role": "application",
+      "verified_change": true
+    },
+    "reason": "Actor, asset, action and time match a simulated approved change.",
+    "decision": "close",
+    "report": "CLOSE. Actor, asset, action and time match a simulated approved change."
+  },
+  "unseen_thread_empty": true,
+  "event_retained_on_partial_update": true,
+  "other_thread_unchanged": true
+}
